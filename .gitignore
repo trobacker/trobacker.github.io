@@ -1,0 +1,12 @@
+.DS_Store
+/_site/
+/.quarto/
+*.pyc
+__pycache__/
+.venv/
+
+**/*.quarto_ipynb
+
+# Intermediate talk renders (the published copy lives in talks/)
+_talks-src/*/*.html
+_talks-src/*/*_files/

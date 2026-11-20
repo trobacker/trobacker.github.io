@@ -1,0 +1,174 @@
+---
+title: "CV"
+format:
+  html:
+    format-links: false
+  typst:
+    output-file: Thomas_Robacker_CV.pdf
+    title: ""
+    papersize: us-letter
+    fontsize: 10pt
+    margin:
+      x: 0.7in
+      y: 0.6in
+---
+
+::: {.content-visible when-format="html"}
+[[]{.bi .bi-file-pdf} Download PDF](Thomas_Robacker_CV.pdf){.btn .btn-outline-primary .btn-sm}
+:::
+
+<!-- PDF-only styling and header. It lives in the body (not include-in-header)
+     so it overrides the default Quarto Typst template's own set rules. -->
+::: {.content-visible when-format="typst"}
+```{=typst}
+#let cv-accent = rgb("#1f5fbf")
+#set par(justify: false, leading: 0.65em, spacing: 0.85em)
+#set list(indent: 0.5em, spacing: 0.6em)
+#set terms(indent: 0pt, hanging-indent: 0pt, spacing: 0.55em)
+#show terms.item: it => block(above: 0.85em, below: 0.45em)[
+  #it.term #h(1fr) #emph(it.description)
+]
+#show link: set text(fill: cv-accent)
+#show heading.where(level: 1): it => block(above: 1.25em, below: 0.65em, width: 100%)[
+  #set text(size: 11.5pt, weight: "bold", fill: cv-accent)
+  #smallcaps(it.body)
+  #v(-0.7em)
+  #line(length: 100%, stroke: 0.6pt + black)
+]
+#show heading.where(level: 2): it => block(above: 1em, below: 0.55em)[
+  #set text(size: 10pt, weight: "bold", style: "italic")
+  #it.body
+]
+
+#align(center)[
+  #text(size: 20pt, weight: "bold")[Thomas Robacker] \
+  #v(0.2em)
+  #text(size: 9.5pt)[
+    #link("mailto:trobacker@umass.edu")[trobacker\@umass.edu] #h(0.4em)|#h(0.4em)
+    #link("https://trobacker.github.io")[trobacker.github.io] #h(0.4em)|#h(0.4em)
+    #link("https://github.com/trobacker")[github.com/trobacker] #h(0.4em)|#h(0.4em)
+    #link("https://www.linkedin.com/in/thomas-robacker/")[linkedin.com/in/thomas-robacker]
+  ]
+]
+#v(0.4em)
+```
+:::
+
+PhD candidate in Statistics at UMass Amherst working on probabilistic
+forecasting, Bayesian modeling, and time-series methods for infectious disease
+surveillance, with industry experience in insurance analytics from data science
+internships at Travelers and The Hartford.
+
+## Education
+
+**University of Massachusetts Amherst** — Amherst, MA
+: PhD in Statistics, expected May 2027
+
+  - Distinguished Teaching Award for Excellence as a TA/Discussion Leader (May 2025)
+
+**East Tennessee State University** — Johnson City, TN
+: M.S. in Mathematical Sciences, 2015
+
+  - Thesis: [Comparison of Two Parameter Estimation Techniques for Stochastic Models](https://dc.etsu.edu/etd/2567/)
+  - Outstanding Graduate Student Award
+
+**University of Tennessee, Knoxville** — Knoxville, TN
+: B.S. in Physics and B.S. in Mathematics <!-- TODO: graduation year -->
+
+  - Research projects in experimental particle physics
+
+## Research & Industry Experience
+
+**Graduate Research Assistant**, Reich Lab, Biostatistics & Epidemiology, UMass Amherst
+: Fall 2024 – present
+
+  - Administrator and modeler for the [SARS-CoV-2 Variant Nowcast Hub](https://github.com/reichlab/variant-nowcast-hub):
+    run weekly models, manage genomic surveillance data, and handle the
+    operational work behind a collaborative modeling platform.
+  - Probabilistic forecasting with Bayesian hierarchical, time-series, and
+    machine learning models, including UMass model development for CDC
+    [FluSight](https://github.com/cdcepi/FluSight-forecast-hub).
+  - Developed WISAR6, a PyMC AR(6) + Fourier seasonality model fit with a
+    WIS-loss Gibbs posterior in place of a likelihood, at the state and US levels.
+
+**Data Scientist Intern**, Actuarial Strategic Modeling, The Hartford — Hartford, CT
+: Summer 2026
+
+  - Built a loss ratio prediction framework to improve understanding of
+    portfolio profitability, risk segmentation, and underwriting opportunities
+    across general liability.
+
+**Data Scientist Intern**, Travelers Insurance — Hartford, CT
+: Summers 2023 and 2024
+
+  - 2024: Predictive modeling of property premiums using market-wide features,
+    including AI model scores, aerial imagery, and property information.
+  - 2023: Extended a LightGBM survival model for customer retention with
+    aerial imagery features.
+  - Won the 2022 Travelers Data Science Modeling Competition (predictive
+    modeling of customer conversion).
+
+## Publications & Preprints
+
+- MacArthur, I.\*, **Robacker, T.**\*, et al. (2026). [Collaborative estimation and evaluation of SARS-CoV-2 variant nowcasting in the United States](https://arxiv.org/abs/2606.07129). *Preprint.*
+- MacArthur, I.\*, **Robacker, T.**\*, Ray, E. L., Rogers, B. W., Reich, N. G., & Griffin, M. (2026). [Comparison of probabilistic nowcasts and forecasts of SARS-CoV-2 variant proportions made by hierarchical multinomial linear regression models](https://arxiv.org/abs/2605.22676). *Preprint.*
+- Davis, J., et al. (2026). Multi-season evaluation and analysis of categorical trend forecasts of influenza hospital admissions in the United States. *Submitted to Nature Communications.*
+- Joyner, M., & **Robacker, T.** (2017). MCR method for estimation of parameters in continuous time Markov chain models. *International Journal of Pure and Applied Mathematics*, 112(2), 381–416.
+- **Robacker, T.** (2015). [Comparison of two parameter estimation techniques for stochastic models](https://dc.etsu.edu/etd/2567/). M.S. thesis, East Tennessee State University.
+
+[\* Co-first authors]{.footnote-note}
+
+## Software
+
+- [**fixedCV**](https://cran.r-project.org/package=fixedCV) (CRAN, 2026), co-author with Rebecca Kurtz-Garcia.
+  Fixed-smoothing (fixed-b) critical values for inference under serial
+  correlation or conditional heteroskedasticity.
+  Simulation code: [fixedCVsims](https://github.com/trobacker/fixedCVsims).
+- [**scoring-multiclass-props**](https://github.com/trobacker/scoring-multiclass-props).
+  Research code on energy scores for evaluating probabilistic forecasts of
+  multi-class proportions.
+
+## Presentations
+
+### Talks
+
+- *WISAR6: Fitting a Flu Forecaster to the Score It's Judged By.* Reich Lab, UMass Amherst, November 2026. [[[slides]](talks/wisar6.html)]{.content-visible when-format="html"}[[[slides]](https://trobacker.github.io/talks/wisar6.html)]{.content-visible when-format="typst"}
+- *Evaluating Predictions of Multi-class Population Proportions: A Variant Nowcasting Case Study* (work in progress, with M. Griffin, K. Johnson, I. MacArthur, D. Morris, B. Rogers, E. Ray, N. Reich). London School of Hygiene & Tropical Medicine, April 16, 2026.
+- *US SARS-CoV-2 Variant Nowcast Hub* (with I. MacArthur and K. Johnson). UMass Reich Lab & CMU Delphi Lab, March 27, 2026.
+- *Use Cases of Statistical Learning: A Biased Grad Student's Data Science Perspective.* Guest lecture, Statistical Computing, UMass Amherst, October 22, 2025.
+- *Variant Hub Modeling and Scoring Retrospective* (with I. MacArthur, M. Griffin, E. Ray, N. Reich, B. Rogers). Meyers Lab, University of Texas at Austin, October 16, 2025.
+- *Practical Considerations for Fixed-Smoothing Limiting Distributions.* Joint Statistical Meetings (JSM), August 5, 2025.
+- *A Brief Conceptual Introduction to Hamiltonian Monte Carlo.* UMass Amherst, November 2023.
+
+### Posters
+
+- **Robacker, T.**, Griffin, M., MacArthur, I., Reich, N. G., & Johnson, K. E. *The SARS-CoV-2 Variant Nowcast Hub: One Year of Collaborative Modeling and Insights.*
+  10th International Conference on Infectious Disease Dynamics (Epidemics<sup>10</sup>), San Diego, CA, November 2025; UMass SPHHS Research Day, May 2026.
+- **Robacker, T.**, MacArthur, I., & members of the epiENGAGE Center. *United States SARS-CoV-2 Variant Nowcast Hub.*
+  Insight Net Annual Meeting, Salt Lake City, UT, May 2025.
+
+## Teaching
+
+**Instructor of Mathematics**, Warren Wilson College — Asheville, NC
+: July 2015 – June 2022
+
+**Teaching Assistant**, UMass Amherst
+: Intro Statistics, Data Visualization, Statistics With an Impact Mindset
+  (SWIM), Advanced Bayesian Statistics, and Machine Learning (Smith College).
+  R Tutoring Center lead (Fall 2025).
+
+**TA/Instructor**, SISMID, Emory University
+: [Nowcasting and Forecasting Infectious Disease Dynamics](https://github.com/nfidd/sismid)
+  with Sam Abbott and Nick Reich, July 2025.
+
+## Skills
+
+- **Languages:** Python, R, SQL
+- **Modeling:** Bayesian hierarchical models and MCMC, time series and
+  probabilistic forecasting, forecast evaluation and proper scoring rules,
+  generalized linear models, machine learning and predictive modeling,
+  statistical methods in clinical trials
+- **Libraries:** PyMC, scikit-learn, XGBoost, LightGBM, SHAP, h2o, pandas,
+  Polars, GeoPandas, tidyverse
+- **Tools:** Git/GitHub, Jupyter, RStudio, Quarto, LaTeX, MATLAB, Unix/Linux,
+  AWS (EC2, SageMaker)

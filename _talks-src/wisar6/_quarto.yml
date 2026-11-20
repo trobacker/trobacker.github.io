@@ -1,0 +1,9 @@
+# Standalone project so this deck renders separately from the website
+# (the site never runs R). Build with ../build.sh, which copies the
+# self-contained HTML to talks/ at the repo root.
+project:
+  type: default
+
+format:
+  revealjs:
+    embed-resources: true

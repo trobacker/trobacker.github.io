@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+  # Prebuilt, self-contained talk decks (see _talks-src/build.sh)
+  resources:
+    - "talks/"
+
+website:
+  title: "Thomas Robacker"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/trobacker
+      - icon: envelope
+        href: mailto:trobacker@umass.edu
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false

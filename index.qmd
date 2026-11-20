@@ -1,0 +1,56 @@
+---
+title: "Thomas Robacker"
+subtitle: "PhD Candidate in Statistics · UMass Amherst"
+---
+
+## Welcome
+
+Hi, I'm Thomas. I'm a PhD candidate in Statistics at the University of
+Massachusetts Amherst (expected May 2027), where I work in the
+[Reich Lab](https://reichlab.io) on probabilistic forecasting for infectious
+disease surveillance.
+
+My research focuses on Bayesian modeling, time series, and how we evaluate
+forecasts: which scoring rules to use, and what happens when a model is fit
+to the very score it will be judged by. I'm an administrator and modeler for
+the [US SARS-CoV-2 Variant Nowcast Hub](https://github.com/reichlab/variant-nowcast-hub),
+a collaborative platform where teams submit weekly nowcasts of variant
+proportions. I'm also active in model development for the CDC's
+[FluSight](https://github.com/cdcepi/FluSight-forecast-hub) forecasting hub,
+where I'm a contributor to
+[UMass-flusion](https://github.com/cdcepi/FluSight-forecast-hub/blob/main/model-metadata/UMass-flusion.yml),
+the Reich Lab's designated ensemble submission. My WISAR6 model is one of its
+components for the 2026/27 season.
+
+Outside the lab, I've spent three summers as a data science intern in
+insurance (Travelers and The Hartford), building predictive models for
+pricing, retention, and loss ratios. Before graduate school at UMass, I taught
+mathematics at Warren Wilson College in Asheville, NC for seven years, and I
+still love teaching.
+
+## Research interests
+
+- Probabilistic forecasting and nowcasting
+- Forecast evaluation and proper scoring rules
+- Bayesian hierarchical models and computation (MCMC, generalized Bayes)
+- Time series and spatio-temporal modeling
+- Machine learning for predictive modeling
+
+## On this site
+
+Below are some links to my recent work.
+
+- **[CV](cv.qmd)**: education, experience, publications, software, talks, and
+  teaching, with a [PDF version](Thomas_Robacker_CV.pdf).
+- **Slides**: [*WISAR6: Fitting a flu forecaster to the score it's judged by*](talks/wisar6.html),
+  an interactive deck from a November 2026 Reich Lab talk.
+- **Software**: [fixedCV](https://cran.r-project.org/package=fixedCV), an R
+  package on CRAN for fixed-smoothing critical values in time-series inference.
+  More of my code is on [GitHub](https://github.com/trobacker).
+
+## Get in touch
+
+The best way to reach me is by email at
+[trobacker@umass.edu](mailto:trobacker@umass.edu). You can also find me on
+[LinkedIn](https://www.linkedin.com/in/thomas-robacker/) and
+[GitHub](https://github.com/trobacker).
