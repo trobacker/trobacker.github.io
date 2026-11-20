@@ -98,9 +98,9 @@ plot_fc <- function(fc, loc, ref, labels, weeks_back = 10, weeks_fwd = 6,
 
 ## The one-sentence pitch
 
-Most Bayesian models are fit by maximizing a **likelihood**.
+Most Bayesian models weight parameter values by a **likelihood**: prior × likelihood gives the posterior, which we sample rather than maximize.
 
-[WISAR6]{.wisar} is fit by minimizing **the forecast score we're graded on**.
+[WISAR6]{.wisar} swaps the likelihood for **the forecast score we're graded on**: parameters that score better under WIS get more posterior weight.
 
 <br>
 
@@ -240,7 +240,7 @@ $$
 ## But every model is wrong
 
 - WISAR6 is a simple model of a complicated epidemic process.
-- Under misspecification, likelihood fitting chases the parameter closest in **KL divergence** to the truth. That is *not* the same as the parameter that **forecasts best under WIS**.
+- Under misspecification, a likelihood-based posterior concentrates (as data accumulate) around the parameter closest in **KL divergence** to the truth. That is *not* the same as the parameter that **forecasts best under WIS**.
 - Example of the cost: a few sharp, noisy peak weeks can inflate the noise scale $\sigma_\ell$, and **every** interval for that location widens.
 
 ::: {.takeaway}

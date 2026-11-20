@@ -25228,8 +25228,8 @@ Thomas Robacker
 </section>
 <section id="the-one-sentence-pitch" class="slide level2">
 <h2>The one-sentence pitch</h2>
-<p>Most Bayesian models are fit by maximizing a <strong>likelihood</strong>.</p>
-<p><span class="wisar">WISAR6</span> is fit by minimizing <strong>the forecast score we’re graded on</strong>.</p>
+<p>Most Bayesian models weight parameter values by a <strong>likelihood</strong>: prior × likelihood gives the posterior, which we sample rather than maximize.</p>
+<p><span class="wisar">WISAR6</span> swaps the likelihood for <strong>the forecast score we’re graded on</strong>: parameters that score better under WIS get more posterior weight.</p>
 <p><br></p>
 <ol type="1">
 <li>Context: FluSight and UMass-flusion</li>
@@ -25365,7 +25365,7 @@ display:block!important;
 <h2>But every model is wrong</h2>
 <ul>
 <li>WISAR6 is a simple model of a complicated epidemic process.</li>
-<li>Under misspecification, likelihood fitting chases the parameter closest in <strong>KL divergence</strong> to the truth. That is <em>not</em> the same as the parameter that <strong>forecasts best under WIS</strong>.</li>
+<li>Under misspecification, a likelihood-based posterior concentrates (as data accumulate) around the parameter closest in <strong>KL divergence</strong> to the truth. That is <em>not</em> the same as the parameter that <strong>forecasts best under WIS</strong>.</li>
 <li>Example of the cost: a few sharp, noisy peak weeks can inflate the noise scale <span class="math inline">\(\sigma_\ell\)</span>, and <strong>every</strong> interval for that location widens.</li>
 </ul>
 <div class="takeaway">
